@@ -300,7 +300,7 @@ jobs:
           done
 
           # 4. The budget: the repository's 10 GB, less the entries of
-          #    requests that changed the pipeline (they live in their own
+          #    requests that changed the pipeline (they live in separate
           #    scopes), less this scope's current entry, which coexists
           #    with the new one until the `prune` job removes it. Sizes
           #    are the compressed sizes the narinfo files record, which
