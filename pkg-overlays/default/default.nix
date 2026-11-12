@@ -6,13 +6,13 @@
 # `projects` holds it as `ghostel-mux/default`, which its package sets
 # apply by default. The ghostel-mux source comes from the
 # `ghostel-mux-src` input.
-{ closure-inputs, closure-lib, ... }:
+{ closure-lib, ... }:
 {
   overlay = closure-lib.caisson.nixpkgs.mkPackagesOverlay (
     { callPackage, ... }:
     import ../../pkgs {
       inherit callPackage;
-      src = closure-inputs.ghostel-mux-src;
+      src = closure-lib.caisson.dependencies.ghostel-mux-src;
     }
   ) "ghostel-mux";
 }
