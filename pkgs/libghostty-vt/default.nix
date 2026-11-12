@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: MIT
 #
-# libghostty-vt, built by ghostty's own recipe from the ghostty commit that
+# libghostty-vt, built by the build recipe in ghostty from the ghostty commit that
 # ghostel's native module vendors.  The session's copy of the terminal and
 # ghostel's must come from the same commit: the snapshot format a session
 # writes has no compatibility promise across versions.  The `ghostty-pin`

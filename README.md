@@ -6,8 +6,8 @@ Emacs showing them.
 
 ghostel-mux's session program links libghostty-vt, and its snapshots
 restore only into a ghostel whose native module vendors the same ghostty
-commit. This flake builds libghostty-vt from that commit with ghostty's own
-recipe, and one of its checks fails when the two commits diverge.
+commit. This flake builds libghostty-vt from that commit with the build
+recipe in ghostty, and one of its checks fails when the two commits diverge.
 
 ## Use it
 
