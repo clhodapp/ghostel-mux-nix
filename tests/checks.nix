@@ -1,6 +1,7 @@
 # SPDX-License-Identifier: MIT
 #
-# The flake's checks.  PACKAGES are this flake's packages for the system;
+# The flake's checks beside the package checks caisson gathers
+# (configs/flake/checks).  PACKAGES are this flake's packages for the system;
 # PKGS supplies Emacs and the ghostel the patch is tested against.  The
 # test suites come from the ghostel-mux source, `ghostel-mux.src`.
 { pkgs, packages }:
@@ -81,8 +82,6 @@ let
   lisp = "${ghostel-mux}/share/emacs/site-lisp";
 in
 {
-  inherit ghostel-mux;
-
   # The session's terminal and ghostel's must come from one ghostty commit.
   ghostty-pin = pkgs.runCommand "ghostty-pin" { } ''
     if ! grep -q "ghostty/archive/${libghostty-vt.ghosttyRev}.tar.gz" ${ghostel.src}/build.zig.zon; then
