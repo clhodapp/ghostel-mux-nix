@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 #
 # The flake's checks beside the package checks caisson gathers
-# (configs/flake/checks).  PACKAGES are this flake's packages for the system;
+# (configs/flake-parts/checks).  PACKAGES are this flake's packages for the system;
 # PKGS supplies Emacs and the ghostel the patch is tested against.  The
 # test suites come from the ghostel-mux source, `ghostel-mux.src`.
 { pkgs, packages }:
