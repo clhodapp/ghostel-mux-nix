@@ -32,6 +32,13 @@
     # ghostel patch and the tests the checks run.
     ghostel-mux-src.url = "github:clhodapp/ghostel-mux";
     ghostel-mux-src.flake = false;
+
+    # The ghostty commit that ghostel's native module vendors, which
+    # libghostty-vt is built from. The URL names the commit, so updates
+    # leave it alone; the `ghostty-pin` check fails when ghostel moves to
+    # another commit and this one stays.
+    ghostty-src.url = "github:ghostty-org/ghostty/b2c78c9bd9bc88a16d9c3769b0fb17ddde1b78b1";
+    ghostty-src.flake = false;
   };
 
   outputs =

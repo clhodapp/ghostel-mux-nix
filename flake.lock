@@ -92,6 +92,23 @@
         "type": "github"
       }
     },
+    "ghostty-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1793240354,
+        "narHash": "sha256-GesLS81douyi/SSegVbd5wmQ7u7+ntGnYVEFpOvgnzU=",
+        "owner": "ghostty-org",
+        "repo": "ghostty",
+        "rev": "b2c78c9bd9bc88a16d9c3769b0fb17ddde1b78b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ghostty-org",
+        "repo": "ghostty",
+        "rev": "b2c78c9bd9bc88a16d9c3769b0fb17ddde1b78b1",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1793341285,
@@ -143,6 +160,7 @@
         "caisson": "caisson",
         "flake-parts": "flake-parts_2",
         "ghostel-mux-src": "ghostel-mux-src",
+        "ghostty-src": "ghostty-src",
         "nixpkgs": "nixpkgs",
         "nixpkgs-lib": "nixpkgs-lib_2"
       }

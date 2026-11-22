@@ -5,7 +5,7 @@
 # `.ghostel-native-hooks-patch`). A consumer that lists this flake in
 # `projects` holds it as `ghostel-mux/default`, which its package sets
 # apply by default. The ghostel-mux source comes from the
-# `ghostel-mux-src` input.
+# `ghostel-mux-src` input, and the ghostty source from `ghostty-src`.
 { closure-lib, ... }:
 {
   overlay = closure-lib.caisson.nixpkgs.mkPackagesOverlay (
@@ -13,6 +13,7 @@
     import ../../pkgs {
       inherit callPackage;
       src = closure-lib.caisson.dependencies.ghostel-mux-src;
+      inherit (closure-lib.caisson.dependencies) ghostty-src;
     }
   ) "ghostel-mux";
 }
