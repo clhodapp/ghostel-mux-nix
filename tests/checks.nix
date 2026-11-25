@@ -36,6 +36,14 @@ let
             zigDeps
             ;
           patches = (m.patches or [ ]) ++ [ ghostel-native-hooks-patch ];
+          # ghostel 0.60.0 requires exactly Zig 0.17.0, and zig_0_17 is a
+          # later 0.17 release.  ghostel accepts any 0.17.x from 0.62.0 on
+          # (dakra/ghostel@30cb6cae07df); this applies that check.
+          postPatch = (m.postPatch or "") + ''
+            substituteInPlace build.zig --replace-fail \
+              'builtin.zig_version.order(required_zig) != .eq' \
+              'builtin.zig_version.major != required_zig.major or builtin.zig_version.minor != required_zig.minor or builtin.zig_version.order(required_zig) == .lt'
+          '';
         });
       };
     }
